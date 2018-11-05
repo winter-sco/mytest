@@ -1,0 +1,194 @@
+@charset "utf-8";
+*{box-sizing:border-box;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{margin:0; padding:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+html,body{font-family: sans-serif;}
+html{outline: none; -webkit-text-size-adjust:none; -webkit-tap-highlight-color:rgba(0,0,0,0); font-size:100px;}            
+body {
+    position:relative;
+    font-size:.18rem; 
+    color:#333333; 
+    line-height: 1.8;
+    min-height: 7.8rem; max-width: 640px;margin:0 auto; background: #F5F5F5;
+}
+a,input{-webkit-tap-highlight-color:rgba(0,0,0,0)}::-webkit-scrollbar{width:0}
+.els{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+table,td,th {border-collapse:collapse}
+ol,ul,li {list-style:none;}
+i,em{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+img{ border:0;}
+img,input,textarea{vertical-align:middle;outline:0}
+input:focus{outline: none;}
+a {text-decoration:none; outline:0; -webkit-tap-highlight-color:rgba(0,0,0,0); color: #fff}
+a:hover,a:active,button{text-decoration:none;outline:0}
+.hid{display:none;}
+img.bgImg{width:100%;}
+/*index*/
+header{margin:0 0.2rem 0.1rem; }
+header img{width: 100%} 
+.rule{ position: absolute; right: 0.4rem; top: 0.2rem; width: 1rem; height: 0.4rem; line-height: 0.4rem; color: #fff; background: #F0554B; border-radius: 2rem; text-align: center;font-size: 0.2rem;}
+.ruletxt{ padding: 0.2rem 0.3rem }
+.ruletxt p{ padding:0.1rem 0; font-size: 0.2rem; line-height: 1.6;color: #3D3D3D;  }
+.logmes,.btnbd{position: relative;background: url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/txt.png) no-repeat; background-size: 100% 0.9rem; height: 0.9rem; margin: -0.4rem 0.3rem 0;}
+.logmes .bd{ font-size: 0.25rem; color: #fff; text-align: center; line-height: 0.9rem; display: block}
+.mymes{ padding: 0.1rem 1.2rem 0.1rem 0.3rem; position: relative;height: 0.9rem}
+	.myuser{float: left; width: 0.7rem; height: 0.7rem; margin-right: 0.15rem; border-radius: 100%;line-height: 1;background: #fff;}
+	.myuser img{width: 100%;height: 100%;border-radius: 100%;}
+	.mygold{overflow: hidden;line-height: 1.5;}
+	.mygold a{font-size: 0.22rem; color: #fff;font-weight: bold;height: 0.37rem;line-height: 0.32rem; display: inline-block;}
+	.mygold span{ display: block; color: #fff; font-size: 0.18rem;}
+	.mygold span em{ display: inline-block; font-size: 0.18rem; text-align: center;padding:0 0.1rem;height: 0.28rem; line-height: 0.28rem; background: #FFE372; border-radius: 0.2rem; color: #000; font-style: normal; margin-right: 0.05rem;}
+	.myhistory{ position: absolute;top: 50%; margin-top: -0.18rem; right: 0.3rem; height: 0.36rem; line-height: 0.36rem; color: #fff; font-size: 0.24rem;    font-weight: bold;}
+.Htit{ text-align: center; padding: 0.1rem; font-size: 0.22rem; color: #989898; background: url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/line.png) no-repeat center center; background-size: 100% auto;    font-weight: normal; }
+.Htit span{ background: #F5F5F5; padding: 0 0.1rem }
+.wares{margin:0.08rem 0.2rem 0;}
+	.wares li{overflow: hidden;position:relative;background: #FFFFFF; border-radius: 0.36rem; margin-bottom: 0.18rem; padding: 0.22rem 0.3rem;}
+	.waresImg{float:left;width:1rem;height:1rem;border-radius: 0.14rem;margin:0 0.2rem 0 0.1rem; }
+	.detail{color:#727171;padding-right: 1.3rem;    padding-top: 0.05rem;}
+	.detail h2{font-size:0.26rem;color:#404040;line-height: 1;}
+	.detail h3{font-size:0.22rem;overflow: hidden;padding-top:0.07rem; height: 0.7rem; line-height: 0.34rem; font-weight: normal;}
+.Lmore{ text-align: center; padding: 0.1rem; font-size: 0.22rem; color: #8D8D8D; }
+.Lmore img{ width: 0.25rem; margin-right: 0.05rem; vertical-align: middle; }
+.check{position: absolute;right:0.14rem;top:50%; margin-top:-0.25rem;width:1.26rem;height:0.55rem;line-height:0.55rem;color:#388eb6;text-align:center;background-color:#F33B3B;border-radius:2rem;cursor: pointer; color: #fff; font-size: 0.22rem}
+.check:hover{column-rule: #58cbdc;;}
+/*弹窗*/
+.dn{ display: none }
+.alpha{width:100%;height:100%;position: fixed; _position: absolute;top: 0;left: 0;z-index:2;background:#000;filter: alpha(opacity=75);-moz-opacity: 0.75;opacity: 0.75;zoom: 1;}
+.tck{width:80%;max-width:400px;position:fixed;z-index:99;top:50%;  margin: auto;  left: 0;  right: 0;transform:translate(0,-50%);background-color:#fff; border-radius: 0.2rem}
+.title{height:0.9rem;line-height:0.9rem;font-size:0.3rem;;background:url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/topbox.png) no-repeat center top; background-size:100% auto;color:#fff;text-align:center;    border-radius: 0.2rem 0.2rem 0 0;}
+.rule_datil{padding:0.3rem;font-size:0.2rem; color:#727171; text-align: center}
+.but_close{position:absolute;height:0.3rem;cursor: pointer;top: 0.3rem;right: 0.2rem;z-index: 1;}
+/*guize*/
+/*xiangqing*/
+.btit{ height: 2.7rem;text-align: left; padding: 0.3rem 0.5rem 0.3rem 0.3rem;position: relative;}
+	.btit span{display: block; font-size: 0.26rem; height: 0.7rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+	.btit em{display: block;font-style: normal; font-size: 0.4rem;    height: 0.9rem;}
+	.btit img{width: 45%; position: absolute; right: 0.3rem; bottom: 0;bottom: -0.3rem;}
+.cont_goods{text-align:center; padding:0.4rem 0.4rem 0.1rem; font-size: 0.26rem; color: #000}
+.bdjs{ text-align: center;color: #F36A21 }
+div.bdjs{ padding: 0rem 0 0.3rem;}
+.bdjs a{color: #5E92FF;text-decoration: underline;}
+.btn_buy{ width: 3rem; height: 0.6rem; line-height: 0.6rem; text-align: center; color: #fff; background: #F0554B; border-radius: 0.1rem; margin:0.2rem auto 0;}
+.btn_buy a{ display: block; }
+.goods{display:inline-block;width:1.2rem;height:1.2rem; margin-top:0.4rem;}
+
+.verification dl{overflow:hidden;padding:0.07rem 0.3rem;line-height:0.42rem;}
+.verification dt,.verification dd{float:left;}
+.verification dt{font-size:0.24rem;margin-right:0.15rem;}
+.verification dd{font-size:0.18rem;}
+.verification dd input{background-color:#f9f8f8;height:0.42rem;padding-left:0.14rem;}
+.verification dd img{height:0.42rem;}
+.btnready{ text-align: center;   padding: 0.1rem 10% 0.4rem;}
+.btnready span{display:inline-block;width:1.5rem;height:0.5rem;line-height:0.5rem;text-align:center;font-size:0.22rem;background-color:#ff9933;color:#fff;border-radius:0.05rem;cursor: pointer;}
+
+.bagget{ padding: 0.1rem; text-align: center; }
+.bagget img{ width: 50%;padding:0.2rem 0.1rem; }
+.bagget p{ font-size: 0.26rem; color: #444444  }
+.bagget span{ font-size: 0.22rem;display: block; padding: 0.1rem 0 0; color: #6A6A6A; }
+.btnqd{ border-radius: 0.2rem; margin: 0.1rem 0.5rem; color: #fff; font-size: 0.26rem; text-align: center; line-height: 0.9rem}
+
+.bagtxt{ font-size: 0.20rem; line-height: 0.4rem; color: #7A7A7A; text-align: center; padding: 0.3rem; background: #EDEDED; border-radius: 0 0 0.2rem 0.2rem}
+.bagtxt span{ color: #F36A21; }
+
+/*签到成功+5金币*/
+.Troll{ background-image: url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/jboxtop.png); color: #000 }
+.Troll img{ width: 52% }
+.Troll em i{font-size: 0.6rem}
+.cont_txt{ font-size: 0.22rem; color: #000; text-align: center; margin: 0.4rem 0 0.2rem 0; }
+.cont_txt p{padding: 0 0.3rem; color: #6A6A6A}
+.cont_txt p img{ max-width: 100%; }
+.cont_txt .pimg{width: 33%; display: block;; margin:0.1rem  auto;}
+.btn_o{border-radius: 0.2rem; margin: 0.1rem 0.5rem; color: #000; font-size: 0.26rem; text-align: center;height:0.8rem;line-height: 0.8rem; background: #F5CE22;}
+
+.btn_j{ background: #F15F39; color: #fff }
+.rule_txt{ padding: 0 0 0.1rem 0; text-align: center;font-size: 0.2rem }
+.rule_txt a{ color: #5E92FF; text-decoration: underline;font-size: 0.18rem }
+/*签到成功+5金币*/
+.Troll .fb{float: left; height: 0.3rem; color: #fff; line-height: 0.3rem; padding: 0 0.16rem; background: #F36A21; font-size: 0.16rem;border-radius: 1rem}
+/*答题回答正确*/
+.t_lv .title,.t_lv .btn_o{ background: #F0554B; color: #fff;margin-bottom: 0; }
+.but_cancel,.btnbd_ok{color: #fff;margin-bottom: 0;border-radius: 0.15rem;
+    margin: 0.1rem 1rem;
+    color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    background: url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/topbox.png) no-repeat center top;
+    background-size: 100% auto;
+    text-align: center;}
+/*回答错误*/
+.t_red .title,.t_red .btn_o{ background: #F0554B; color: #fff;margin-bottom: 0; }
+.t_lv .title,.t_lv .btn_o{ background: #99D341; color: #fff;margin-bottom: 0; }
+.t_red .bagget img{ width: 38% }
+.t_red .cont_txt p{padding: 0.1rem 0.8rem 0.2rem;}
+.cont_txt p span.name{ display: block; padding: 0.1rem; color: #F0554B; font-size: 0.3rem;}
+
+/*积分明细*/
+.morelist{ overflow-y: auto;max-height: 7rem;margin: 0.2rem auto;}
+.jblist{ margin: 0.1rem 0.3rem; /*min-height: 3rem; max-height: 6rem; overflow-y: auto;*/}
+.jblist li{ position: relative;padding:0.1rem  0.2rem 0.1rem 0; font-size: 0.22rem; border-bottom:1px solid #DCDCDC;line-height: 1.8; }
+.jblist li:last-child{border: none;}
+.jblist li .mx{color: #000; font-weight: 400}
+.jblist li span{display: block; color: #8D8D8D }
+.jblist li em{ position: absolute; width: 1rem; height: 0.6rem; top: 50%; right:0;margin-top: -0.3rem; color: #F0554B; text-align:right; font-size: 0.24rem; line-height: 0.6rem }
+.jblist li em i{ color: #000; }
+.pagenext{ padding:0.2rem 0.4rem 0.4rem; text-align: center; font-size: 0.22rem;color: #000  }
+.jblist li.expired .mx,.jblist li.expired span{color:#ccc;}
+/*我的礼包*/
+.jblist li span i{ color: #F0554B }
+/*无礼包记录*/
+.nobags{ padding: 1rem 0.3rem 0.5rem; text-align: center; }
+.nobags img{ width: 40%;margin: 0 0 0.2rem; }
+.nobags .Htit{ margin: 0 0 0.5rem }
+.nobags .Htit span{ background: #fff;}
+
+/*绑定页面*/
+.txtbd{background: #fff; border-radius: 1rem;}
+.txtbd input{ width: 86%; margin: 0 7%; height: 0.9rem; line-height: 0.9rem; font-size:0.22rem; color: #333; text-align:center; border: none; background: none; }
+.btnbd,.btnjb,.btntg{ margin-top:0.2rem; text-align: center; font-size: 0.26rem; color: #fff; line-height: 0.9rem}
+.btnjb a{display: block;}
+.Qtxt{ padding: 0.1rem; text-align: center;font-size: 0.2rem;color: #6E6E6E; margin: 0 0.2rem}
+	.Qtxt p{ padding:0.05rem 0; }
+	.Qtxt p img{ max-width: 100%; width: 80% }
+	.Qtxt span{ font-size: 0.2rem; color: #F2712E }
+/*解绑角色*/
+.user{ background: #fff; padding: 0.1rem 0.3rem; height: 0.9rem; line-height: 0.7rem;    margin-bottom: 0.3rem;}
+.user img{ width: 100%;height: 100%;border-radius: 100%; }
+.user em{ color: #454545; font-size: 0.22rem; font-style: normal;  }
+.nouser{padding:0.5rem 0 0.3rem; height: auto; text-align: center;}
+.nouser .myuser {width: 0.8rem;height: 0.8rem;float: none; display: inline-block;margin: 0;}
+.nouser em{display: block;}
+.myname{margin:0.3rem;padding: 0 0.5rem; border-radius: 2rem; background: #C0C0C0; color: #fff; text-align: center; font-size: 0.22rem; height: 0.9rem; line-height: 0.9rem;}
+/*答题页面*/
+.btndt{margin-top: -0.4rem; text-align: left; padding:0  0.4rem;}
+.btndt span{line-height: 0.36rem; font-size: 0.28rem;}
+.btndt span em{font-size: 0.22rem;display: inline-block;padding: 0 0.1rem; background: #FCE269; color: #000; height: 0.36rem; line-height: 0.36rem; border-radius: 2rem; margin-left:0.15rem; overflow: hidden;vertical-align: -6px;}
+.btndt i{float: right;text-align: right;font-size: 0.22rem;}
+.datit,.datim{ font-size: 0.26rem; color: #6E6E6E; padding: 0.1rem 0.3rem; text-align: center;    font-weight: 400; }
+
+.dnlist{ padding: 0.2rem 0.3rem; }
+.dnlist li{ height: 0.8rem; line-height: 0.8rem; background: #E3E3E3; border-radius: 2rem; text-align: center; color: #585858; font-size: 0.24rem; margin-bottom: 0.2rem }
+.dnlist li:active,.dnlist li.active{ background: #FCE269 }
+.nothing{ padding: 0.2rem;  text-align: center;}
+.nothing img{ width: 40% }
+
+/*tougao*/
+.tougao{ font-size: 0.2rem; color: #6E6E6E }
+.htext{ padding: 0.3rem; background: url(http://p2.qhimg.com/d/inn/b68ec284ba48/images/bg.png) repeat-y; background-size: 100% auto; font-size: 0.22rem; line-height: 1.6; color: #fff; }
+.htext p{ padding-bottom: 0.05rem }
+.htext p:before{ content: "·";    height: 0.5rem; float: left; color: #fff; margin-right: 0.1rem; line-height: 1.5 }
+.Tglist{ padding: 0.2rem 0.25rem 0; font-size: 0.22rem; color: #5F5F5F; }
+.Tglist dt{ padding:0.1rem 0.05rem; }
+.Tglist dd{border: 1px solid #E9E9E9; border-radius: 0.16rem; min-height:0.7rem; line-height: 0.7rem; background: #fff; padding: 0.1rem 0.2rem }
+.Tglist dd input{float: left; width: 100%; border: none;height: 0.5rem; font-size: 0.2rem;color: #5F5F5F;}
+ input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{ color:#D2D2D2;}
+ .Tglist dd textarea{ width: 100%; min-height:2rem;border: none;font-size: 0.2rem; background: none;color: #666;resize:none}
+.getpic{ padding: 0 0.3rem 0.2rem; font-size: 0.2rem; color: #6E6E6E;}
+.ptit{ color: #5F5F5F; font-size: 0.22rem; padding: 0.1rem 0 }
+.des{ padding: 0.2rem 0.3rem; color: #6E6E6E; line-height: 1.8 }
+.sucimg{padding:0.8rem 0.3rem 0.3rem; text-align: center}
+.tougao .Htit{ color: #000 }
+.sucimg img{ width: 32%; }
+.suctxt{ padding: 0.2rem 0.8rem; text-align: center; color: #989898; font-size: 0.22rem; line-height: 1.6 }
